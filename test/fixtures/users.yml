@@ -2,6 +2,7 @@ michael:
   name: Michael Example.com
   email: michael@example.com
   password_digest: <%= User.digest('password') %>
+  admin: true
 
 archer:
   name: Sterling Archer
@@ -17,12 +18,6 @@ malory:
   name: Malory Archer
   email: boss@example.gov
   password_digest: <%= User.digest('password') %>
-
-User.create!(name: "Example User",
-            email: "example@railstutorial.org",
-            password: "foobar",
-            password_confirmation: "foobar",
-            admin: true)
 
 <% 30.times do |n| %>
 user_<%= n %>:
